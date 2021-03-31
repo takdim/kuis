@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NavDraw</string>
+    <string name="tvtextbiodata">Bocoran Kuis Pemrograman Mobile</string>
+    <string name="tvjudul">Biodata</string>
+</resources>

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnHome, btnMessages, btnShutDown;
+    private Button btnHome, btnPhone, btnShutDown;
     private TextView tvBiodata;
 
     @Override
@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btnHome = findViewById(R.id.btnHome);
-        btnMessages = findViewById(R.id.btnMessages);
+        btnPhone = findViewById(R.id.btnPhone);
         btnShutDown = findViewById(R.id.btnShutDown);
 
         tvBiodata = findViewById(R.id.tvBiodata);
 
         btnHome.setOnClickListener(this);
-        btnMessages.setOnClickListener(this);
+        btnPhone.setOnClickListener(this);
         btnShutDown.setOnClickListener(this);
 
         tvBiodata.setOnClickListener(this);
@@ -42,20 +42,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnHome:
-                Uri uri = Uri.parse("geo:-5.1583371,119.4425562");
+                Uri uri = Uri.parse("geo:-5.173869,119.4815338");
                 Intent ii = new Intent(Intent.ACTION_VIEW, uri);
                 ii.setPackage("com.google.android.apps.maps");
                 startActivity(ii);
                 return;
-            case R.id.btnMessages:
-                Uri number = Uri.parse("sms:+6282293410911");
-                Intent intent = new Intent(Intent.ACTION_VIEW, number);
-                intent.putExtra("sms_body", "shenrenkui");
+            case R.id.btnPhone:
+                Uri number = Uri.parse("tel:+6282293410911");
+                Intent intent = new Intent(Intent.ACTION_DIAL, number);
                 startActivity(intent);
                 return;
             case R.id.btnShutDown:
                 out(this);
                 return;
+            case R.id.tvBiodata:
+                startActivity(new Intent(MainActivity.this, Biodata.class));
         }
     }
 

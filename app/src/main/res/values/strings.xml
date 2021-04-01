@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">NavDraw</string>
-    <string name="tvtextbiodata">Bocoran Kuis Pemrograman Mobile</string>
+    <string name="app_name">Kuis</string>
+    <string name="tvtextbiodata">Kuis Pemrograman Mobile</string>
     <string name="tvjudul">Biodata</string>
+    <string name="tvnama">Nama</string>
+    <string name="tvnamaku">Muhammmad Takdim</string>
+    <string name="tvttl">Tempat Tanggal Lahir</string>
+    <string name="tvttlku">15 Mei 2001</string>
+    <string name="tvasalsekolah">Asal Sekolah</string>
+    <string name="tvasalsekolahku">SMA Negeri 12 Makassar</string>
 </resources>
